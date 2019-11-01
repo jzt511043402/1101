@@ -18,6 +18,11 @@
     git reset --hard 版本id、
 
 
+    1创建一个项目
+    2git clone  项目地址
+    3git add .  git commit -m ''
+    4git push origin master
+
 
 
 
