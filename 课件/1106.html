@@ -71,9 +71,9 @@
 </head>
 
 <body>
-    <div class="box">
-        <ul class="tab_box current">
-            <li class="tab">1</li>
+    <div class="box" id="box">
+        <ul class="tab_box">
+            <li class="tab current">1</li>
             <li class="tab">2</li>
             <li class="tab">3</li>
         </ul>
@@ -83,35 +83,42 @@
             <li class="body">3</li>
         </ul>
     </div>
+    <div class="box" id="box2">
+        <ul class="tab_box">
+            <li class="tab current">1</li>
+            <li class="tab">2</li>
+            <li class="tab">3</li>
+        </ul>
+        <ul class="body_box">
+            <li class="body current">1</li>
+            <li class="body">2</li>
+            <li class="body">3</li>
+        </ul>
+    </div>
+    <div class="box" id="box3">
+        <ul class="tab_box">
+            <li class="tab current">1</li>
+            <li class="tab">2</li>
+            <li class="tab">3</li>
+        </ul>
+        <ul class="body_box">
+            <li class="body current">1</li>
+            <li class="body">2</li>
+            <li class="body">3</li>
+        </ul>
+    </div>
+
 </body>
 
 </html>
 <script>
-    //获取元素
-    function Tab(idSelector) {
-        this.box = document.querySelector(idSelector);//获取最外侧 的 盒子
-        this.tabs = this.box.getElementsByClassName('tab');
-        this.bodys = this.box.getElementsByClassName('body');
-        this.addTabs()
+    function Tab(id){
+    const box
     }
+    var tab = new Tab('#box');
 
-    //添加类名的函数
-    Tab.prototype.addTabs = function () {
-        //给每个tab添加点击事件
-        let len = this.tabs.length
-        for (let i = 0; i < len; i++) {
-            this.tabs[i].onclick = function () {
-                console.log(1);
 
-                this.tabs[i].className = 'tab current'
-                this.bodys[i].className = 'body current'
-            }
 
-        }
-    }
 
-            //循环li给每个点击事件添加类名
 
-    //删除类名的函数
-        // 循环li给每个body删除类名
 </script>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+
+    // Object.assign //  浅拷贝
+    // Object.assign(obj3,obj2,obj1)//越往右边层级越高
+    // 从左往右 赋值 改变的是obj2
+
+    /*
+        方法继承：
+        通过浅拷贝，把父类上原型的方法或者属性都 赋值给 子类的原型（子类，父类）
+    */
+
+    function Parent() {
+        this.a = 1;
+        this.b = [1, 2, this.a];
+        this.c = { demo: 5 };
+        this.show = function () {
+            console.log(this.a, this.b, this.c.demo);
+        }
+    }
+    // function Child() {
+    //     this.a = 2;
+    //     this.change = function () {
+    //         this.b.push(this.a);
+    //         this.a = this.b.length;
+    //         this.c.demo = this.a++;
+    //     }
+    // }
+    // Child.prototype = new Parent();
+    // var parent = new Parent();
+    // var child1 = new Child();
+    // var child2 = new Child();
+    // child1.a = 11;
+    // child2.a = 12;
+    // console.log(
+
+    // parent.show(),
+    // child1.show(),
+    // child2.show(),
+    // child1.change(),
+    // child2.change(),
+    // parent.show(),
+    // child1.show(),
+    // child2.show()
+    // );
+
+</script>
