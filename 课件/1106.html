@@ -112,10 +112,36 @@
 
 </html>
 <script>
-    function Tab(id){
-    const box
+    function Tab(id) {
+        this.box = document.querySelector(id);
+        this.tab = this.box.getElementsByClassName('tab');
+        this.body = this.box.getElementsByClassName('body')
+        console.log(this.body);
+        this.addclass()
+
+    }
+    Tab.prototype.addclass = function () {
+        let len = this.tab.length;
+            for (let i = 0; i < len; i++) {
+                this.tab[i].onclick = ()=> {
+                    console.log(len);
+                this.deleteclass()
+                this.tab[i].className = 'tab current'
+                this.body[i].className = 'body current'
+            }
+        }
+
+    }
+    Tab.prototype.deleteclass = function(){
+        let len = this.tab.length;
+        for (let i = 0; i < len; i++) {
+            this.tab[i].className = 'tab'
+                this.body[i].className = 'body' 
+        }
     }
     var tab = new Tab('#box');
+    var tab = new Tab('#box2');
+    var tab = new Tab('#box3');
 
 
 
