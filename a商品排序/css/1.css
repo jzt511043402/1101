@@ -1,0 +1,55 @@
+nav{
+    width: 980px;
+    height: 60px;
+    background:aqua;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 60px;
+    position: relative;
+}
+.p{
+    width: 74px;
+    height: 0px;
+} 
+nav a{
+    padding: 0 90px 0 0;
+    padding-right: 150px;
+    
+
+}
+#ele{
+    height: 21px;
+    position: absolute;
+    top: 20px;
+    right: 333px;
+}
+input{
+    height: 17px;
+}
+.list{
+    
+    width: 980px;
+    height: 100%;
+    margin:0 auto;
+    background: red;
+}
+.list li{
+    float: left;
+    width: 25%;
+    height: 400px;
+    /* background: #b0b0b0; */
+    text-align: center;
+
+}
+.list li img{
+    margin-top:10px ;
+    width: 200px;
+    height: 200px;
+}
+.list li p{
+    margin: 0 auto;
+    width: 150px;
+    font-size: 17px;
+    height: 30px;
+    border-bottom: 1px solid #b0b0b0;
+}
