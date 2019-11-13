@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    *{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.md{
+    width: 1200px;
+    margin: auto;
+}
+.md header{
+    border:1px solid #ccc;
+    height: 50px;
+    line-height: 50px;
+}
+.md header span{
+    padding: 0 20px;
+    cursor: pointer;
+    user-select: none;
+}
+img{
+    height: 100%;
+}
+/* 三角型 */
+.md header span:first-child{
+    cursor: default
+}
+#box{
+    overflow: hidden;
+    margin-top: 15px;
+}
+#box li{
+    position: relative;
+    float: left;
+    width: 220px;
+    height: 340px;
+    margin-right: 25px;
+    margin-bottom: 25px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+}
+#box li:nth-child(5n){
+    margin-right: 0;
+}
+#box li:hover{
+    border-color: red;
+}
+#box li .imgBox{
+    height: 180px;
+    width: 180px;
+    /* margin: auto; */
+    margin: 20px auto 10px;
+}
+#box li .til{
+    color: rgb(51, 49, 49);
+    text-align: center;
+    font-size: 14px;
+}
+#box li .desc{
+    text-align: center;
+    font-size: 15px;
+    margin: 10px;
+}
+#box li .price{
+    text-align: center;
+    font-size: 15px;
+    color: red;
+}
+#box li .botBox{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+}
+#box li .botBox div{
+    flex: 1;
+    border-top:1px solid #ccc;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+}
+#box li .botBox div:first-child{
+    border-right: 1px solid #ccc;
+}
+    </style>
+</head>
+
+<body>
+    <div class='md'>
+        <header>
+            <span>排序：</span>
+            <span id='timeBtn'>上架时间</span>
+            <span id='priceBtn'>价格</span>
+            <span id='commentBtn'>评价</span>
+        </header>
+        <main>
+            <ul id='box'>
+                <li>
+                    <div class="imgBox">
+                        <img src="https://img1.360buyimg.com/n6/jfs/t1/10114/13/497/137584/5bdad733Ee4103e2b/ba2c3d225972eb9c.jpg" alt="">
+                    </div>
+                    <div class="til">手机名</div>
+                    <div class="desc">手机介绍</div>
+                    <div class="price">￥1000.00</div>
+                    <div class="botBox">
+                        <div>选购</div>
+                        <div>34535评价</div>
+                    </div>
+                </li>
+            </ul>
+        </main>
+    </div>
+
+</body>
+
+</html>
+<script src="1.js"></script>
+<!-- <script src="index.js"></script> -->
