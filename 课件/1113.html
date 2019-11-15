@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: auto;
+            padding: 0;
+            list-style: none;
+        }
+
+        #box {
+            width: 300px;
+            height: 350px;
+            border: 2px solid greenyellow;
+            margin: 0 auto;
+            position: relative;
+            border-radius: 15px;
+        }
+
+        #ul li {
+            float: left;
+            margin-top: 40px;
+            margin-left: 40px;
+            text-align: center;
+
+        }
+
+        #ul li input {
+
+            height: 25px;
+            border-radius: 5px;
+        }
+
+        #QQ {
+            margin-left: 40px;
+        }
+
+        #Email {
+            margin-left: 35px;
+        }
+
+        #Mob {
+            margin-left: 21px;
+        }
+
+        #Date1 {
+            margin-left: 23px;
+        }
+
+        button {
+            position: absolute;
+            left: 38%;
+            bottom: 30px;
+            width: 80px;
+            height: 60;
+            font-size: 20px;
+            background: chartreuse;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box">
+        <ul id="ul">
+            <li>QQ: <input type="text" id="QQ"></li>
+            <li>邮箱: <input type="text" id="Email"></li>
+            <li>手机号: <input type="text" id="Mob"></li>
+            <li>身份证: <input type="text" id="Date1"></li>
+            <button id="btn">注册</button>
+        </ul>
+    </div>
+</body>
+
+</html>
+<script>
+    let ipt = document.querySelectorAll('input')
+    //     请输入QQ
+    // 请输入邮箱
+    // 请输入手机号
+    // 请输入身份证
+    
+
+    btn.onclick = function () {
+    
+        if (QQ.value === '') {
+           alert('输入QQ')
+        }
+        if (Email.value === '') {
+           alert('输入Email')
+        }
+        if (Mob.value === '') {
+           alert('输入Mob')
+        }
+        if (Date1.value === '') {
+           alert('输入Date')
+        }
+        
+        if(!QQ.value.match(/^[^0]\d{5,10}$/g)){
+           alert('正确输入你的QQ')
+        }
+        // xxx_love@163.com
+        if(!Email.value.match(/^[^a-z]\w{5-8}\@163\.com$/g)){
+            alert('正确输入你的Email')
+            
+        }
+    }
+</script>
