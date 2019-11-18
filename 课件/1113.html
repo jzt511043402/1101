@@ -16,8 +16,8 @@
         #box {
             width: 300px;
             height: 350px;
-            border: 2px solid greenyellow;
-            margin: 0 auto;
+            border: 3px solid greenyellow;
+            margin: 100px auto;
             position: relative;
             border-radius: 15px;
         }
@@ -62,12 +62,16 @@
             background: chartreuse;
             border-radius: 10px;
         }
+        #btn{
+            display: block;
+        }
     </style>
 </head>
 
 <body>
     <div id="box">
         <ul id="ul">
+            
             <li>QQ: <input type="text" id="QQ"></li>
             <li>邮箱: <input type="text" id="Email"></li>
             <li>手机号: <input type="text" id="Mob"></li>
@@ -75,40 +79,59 @@
             <button id="btn">注册</button>
         </ul>
     </div>
-    💕💕 
+    
 </body>
 
 </html>
 <script>
     let ipt = document.querySelectorAll('input')
-    //     请输入QQ
-    // 请输入邮箱
-    // 请输入手机号
-    // 请输入身份证
-    
-
-    btn.onclick = function () {
-    
-        if (QQ.value === '') {
-           alert('输入QQ')
-        }
-        if (Email.value === '') {
-           alert('输入Email')
-        }
-        if (Mob.value === '') {
-           alert('输入Mob')
-        }
-        if (Date1.value === '') {
-           alert('输入Date')
-        }
+    let qq = QQ.value.match(/^[^0]\d{5,10}$/g)
+        let email = Email.value.match(/^[^a-z]\w{5,8}\@163\.com$/g)
+        let mob = Mob.value.match(/^1[3-8]{2}\d{8}$/g)
+        let date1 = Date1
+        // 请输入QQ
+        // 请输入手机号
+        // 请输入身份证
         
-        if(!QQ.value.match(/^[^0]\d{5,10}$/g)){
-           alert('正确输入你的QQ')
-        }
-        // xxx_love@163.com
-        if(!Email.value.match(/^[^a-z]\w{5-8}\@163\.com$/g)){
-            alert('正确输入你的Email')
+        // 请输入邮箱
+    /******/// oninput 输入监听事件输入一个字符发一次请求
+
+    
+   
+    btn.onclick = function () {
+    // function ifSS (){
+       
+        // if (QQ.value === '') {
+        //     alert('输入QQ ')
             
+        // //   btn.style.display = 'none';
+        // }else 
+        if(!qq){
+           alert('正确输入你的QQ')
+        }else
+        
+        // if (Email.value === '') {
+        //     alert('输入Email ')
+          
+        // }else
+        if(!email){
+            alert('正确输入你的Email')
+     
+        }else
+        // if (Mob.value === '') {
+        //     alert('输入Mob')
+           
+        // }else
+        if(!mob){
+            alert('正确输入你的Mob')
+     
+        }else
+        if (Date1.value === '') {
+            alert('输入Date')
         }
-    }
+    // }   
+}  
+        // xxx_love@163.com
+        
+    
 </script>
